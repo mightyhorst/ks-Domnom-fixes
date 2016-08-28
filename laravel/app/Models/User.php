@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
     
-	public $table = 'users';
+	public $table = 'users';//'users';
 	public $guarded = [];
 	public $fillable = [ 'id',  'email',  'pwd',  'first_name',  'last_name',  'about', ];
 

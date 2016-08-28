@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Drink extends Model
 {
     
-	public $table = 'drinks';
+	public $table = 'drinks';//'drinks';
 	public $guarded = [];
 	public $fillable = [ 'id',  'title',  'price', ];
 
