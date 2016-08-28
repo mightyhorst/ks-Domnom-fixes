@@ -1,0 +1,7 @@
+{
+	"data": [
+		{"id": 2001 ,"title": "Bread & Housemade Cultured Butter" ,"description": "with Raw Honey, Radishes & Sea Salt" ,"price": 7 ,"type": "snack"},
+		{"id": 2002 ,"title": "Pork Rillettes with Pickles & Toast" ,"description": "with Roasted Brussels Sprouts" ,"price": 7 ,"type": "snack"},
+		{"id": 2003 ,"title": "Chicken Liver Mousse with Pickles & Toast" ,"description": "" ,"price": 7 ,"type": "snack"}
+	]
+}
