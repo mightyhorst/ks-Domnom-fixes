@@ -11,7 +11,7 @@ export class BlogPostsService {
 	constructor (private _http: Http){}
 
 	getBlogPosts(domain:string) {
-		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createBlogPostsModels(data.data), error => console.error(error));
+		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createBlogPostsModels(data), error => console.error(error));
 	}
 	getBlogPostsData(rowNum: number){
 		return this.blogPosts[rowNum];

@@ -11,7 +11,7 @@ export class SnacksService {
 	constructor (private _http: Http){}
 
 	getSnacks(domain:string) {
-		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createSnacksModels(data.data), error => console.error(error));
+		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createSnacksModels(data), error => console.error(error));
 	}
 	getSnacksData(rowNum: number){
 		return this.snacks[rowNum];

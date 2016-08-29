@@ -11,7 +11,7 @@ export class BeerService {
 	constructor (private _http: Http){}
 
 	getBeer(domain:string) {
-		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createBeerModels(data.data), error => console.error(error));
+		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createBeerModels(data), error => console.error(error));
 	}
 	getBeerData(rowNum: number){
 		return this.beer[rowNum];

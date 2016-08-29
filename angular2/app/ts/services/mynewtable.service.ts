@@ -11,7 +11,7 @@ export class MynewtableService {
 	constructor (private _http: Http){}
 
 	getMynewtable(domain:string) {
-		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createMynewtableModels(data.data), error => console.error(error));
+		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createMynewtableModels(data), error => console.error(error));
 	}
 	getMynewtableData(rowNum: number){
 		return this.mynewtable[rowNum];

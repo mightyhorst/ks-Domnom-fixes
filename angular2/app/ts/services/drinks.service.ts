@@ -11,7 +11,7 @@ export class DrinksService {
 	constructor (private _http: Http){}
 
 	getDrinks(domain:string) {
-		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createDrinksModels(data.data), error => console.error(error));
+		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createDrinksModels(data), error => console.error(error));
 	}
 	getDrinksData(rowNum: number){
 		return this.drinks[rowNum];

@@ -11,7 +11,7 @@ export class UsersService {
 	constructor (private _http: Http){}
 
 	getUsers(domain:string) {
-		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createUsersModels(data.data), error => console.error(error));
+		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createUsersModels(data), error => console.error(error));
 	}
 	getUsersData(rowNum: number){
 		return this.users[rowNum];

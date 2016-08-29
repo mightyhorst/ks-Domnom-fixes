@@ -11,7 +11,7 @@ export class WhiteWineService {
 	constructor (private _http: Http){}
 
 	getWhiteWine(domain:string) {
-		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createWhiteWineModels(data.data), error => console.error(error));
+		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createWhiteWineModels(data), error => console.error(error));
 	}
 	getWhiteWineData(rowNum: number){
 		return this.whiteWine[rowNum];

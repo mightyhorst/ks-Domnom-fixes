@@ -11,7 +11,7 @@ export class FoodService {
 	constructor (private _http: Http){}
 
 	getFood(domain:string) {
-		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createFoodModels(data.data), error => console.error(error));
+		this._http.get('http://'+domain+this.url).map(res => res.json()).subscribe(data => this.createFoodModels(data), error => console.error(error));
 	}
 	getFoodData(rowNum: number){
 		return this.food[rowNum];
